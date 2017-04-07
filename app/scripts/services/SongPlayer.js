@@ -27,7 +27,10 @@
     });
  
     currentSong = song;
- };     
+ };  
+     /**
+     Plays song of song.playying is equal to true.
+     **/
      var playSong = function(song) {
              currentBuzzObject.play();
              song.playing = true;
@@ -40,7 +43,7 @@
          
             } else if (currentSong === song) {
          if (currentBuzzObject.isPaused()) {
-             currentBuzzObject.play();
+             playSong(song);
          }
      }  
   };
