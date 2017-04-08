@@ -4,11 +4,8 @@
 
      var currentAlbum = Fixtures.getAlbum();
      
-     SongPlayer.currentSong = null;
+     //SongPlayer.currentSong = null;
      
-     var getSongIndex = function(song) {
-     return currentAlbum.songs.indexOf(song);
- };
  /**
  * @desc Buzz object audio file
  * @type {Object}
@@ -45,6 +42,10 @@
              currentBuzzObject.stop();
              song.playing = null;
      }
+     var getSongIndex = function(song) {
+        return currentAlbum.songs.indexOf(song);
+ };
+     SongPlayer.currentSong = null;
      
      SongPlayer.play = function(song) {
          song = song || SongPlayer.currentSong;
@@ -53,7 +54,7 @@
              playSong(song);
          
             } else if (SongPlayer.currentSong === song) {
-         if (currentBuzzObject.isPaused()) {
+                if (currentBuzzObject.isPaused()) {
              playSong(song);
          }
      }  
@@ -72,7 +73,7 @@
          currentSongIndex--;
          
         if (currentSongIndex < 0) {
-            stopSong(song);
+            stopSong(SongPlayer.currentSong);
         } else {
          var song = currentAlbum.songs[currentSongIndex];
             setSong(song);
@@ -82,8 +83,8 @@
      SongPlayer.next = function() {
          var currentSongIndex = getSongIndex(SongPlayer.currentSong);
          currentSongIndex++;
-         if (currentSongIndex < 0) {
-            stopSong(song);
+         if (currentSongIndex === currentAlbum.songs.length) {
+            stopSong(SongPlayer.currentSong);
         } else {
          var song = currentAlbum.songs[currentSongIndex];
             setSong(song);
