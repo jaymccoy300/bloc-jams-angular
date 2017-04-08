@@ -7,12 +7,12 @@
      <link rel="stylesheet" href="/styles/main.css">
      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
      <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-     <link rel="stylesheet" type="text/css" href="Node-test/styles/normalize.css">
-     <link rel="stylesheet" type="text/css" href="Node-test/styles/main.css">
-     <link rel="stylesheet" type="text/css" href="Node-test/styles/landing.css">
-     <link rel="stylesheet" type="text/css" href="Node-test/styles/collection.css">
-     <link rel="stylesheet" type="text/css" href="Node-test/styles/album.css">
-     <link rel="stylesheet" type="text/css" href="Node-test/styles/player_bar.css">
+     <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
+     <link rel="stylesheet" type="text/css" href="/styles/main.css">
+     <link rel="stylesheet" type="text/css" href="/styles/landing.css">
+     <link rel="stylesheet" type="text/css" href="/styles/collection.css">
+     <link rel="stylesheet" type="text/css" href="/styles/album.css">
+     <link rel="stylesheet" type="text/css" href="/styles/player_bar.css">
 </head>
 <body>
     <nav class="navbar">
@@ -26,8 +26,8 @@
     </nav>
     
     <ui-view></ui-view>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
     <script src="/scripts/app.js"></script>
@@ -37,5 +37,6 @@
     <script src="/scripts/controllers/CollectionCtrl.js"></script>
     <script src="/scripts/controllers/AlbumCtrl.js"></script>
     <script src="/scripts/controllers/PlayerBarCtrl.js"></script>
+    <script src="/scripts/directives/seekBar.js"></script>
 </body>
 </html>
