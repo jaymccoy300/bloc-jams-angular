@@ -1,4 +1,4 @@
- (function() {
+ ( function () {
      function SongPlayer($rootScope, Fixtures) {
      var SongPlayer = {};
 
@@ -20,8 +20,8 @@
      
  var setSong = function(song) {
     if (currentBuzzObject) {
-        currentBuzzObject.stop();
-        SongPlayer.currentSong.playing = null;
+            currentBuzzObject.stop();
+            SongPlayer.currentSong.playing = null;
     }
  
     currentBuzzObject = new buzz.sound(song.audioUrl, {
@@ -51,13 +51,13 @@
         return currentAlbum.songs.indexOf(song);
  };
      SongPlayer.currentSong = null;
+     SongPlayer.currentTime = null;
      SongPlayer.volume = 50;
      
  /**
  * @desc Current playback time (in seconds) of currently playing song
  * @type {Number}
  */
-    SongPlayer.currentTime = null;
      
      SongPlayer.play = function(song) {
          song = song || SongPlayer.currentSong;
@@ -65,9 +65,9 @@
              setSong(song);
              playSong(song);
          
-            } else if (SongPlayer.currentSong === song) {
+        } else if (SongPlayer.currentSong === song) {
                 if (currentBuzzObject.isPaused()) {
-             playSong(song);
+                    playSong(song);
          }
      }  
   };
@@ -115,11 +115,11 @@
      }
  };
         SongPlayer.setVolume = function(volume) {
-        if(currentBuzzObject) {
-            currentBuzzObject.setVolume(volume);
-        }
+            if(currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
+            }
      SongPlayer.volume = volume;
-}; 
+        }; 
 
      return SongPlayer;
  }
