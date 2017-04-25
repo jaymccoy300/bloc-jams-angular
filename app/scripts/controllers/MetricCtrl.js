@@ -1,8 +1,11 @@
  (function() {
-     function MetricCtrl($rootScope) {
-          
+     function MetricCtrl(Metric) {
+          this.a = function () {
+             return Metric.listSongsPlayed(); 
+          };
      }
      
      angular
          .module('blocJams')
-         .controller('MetricCtrl', ['Fixtures', 'SongPlayer', MetricCtrl]);
+         .controller('MetricCtrl', ['Metric', MetricCtrl]);
+ })();

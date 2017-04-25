@@ -1,8 +1,9 @@
 (function() {
-     function metric($document) {
+     function metric($rootScope) {
+         
      }
 
      angular
          .module('blocJams')
-         .directive('metric', ['$document', metric]);
+         .directive('metric', ['$rootScope', metric]);
  })();
