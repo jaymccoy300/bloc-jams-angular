@@ -1,7 +1,7 @@
  (function() {
      function MetricCtrl(Metric) {
           this.a = function () {
-             return Metric.listSongsPlayed(); 
+             return Metric.songCounts(); 
           };
      }
      

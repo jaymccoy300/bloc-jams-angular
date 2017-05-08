@@ -17,11 +17,55 @@
         });
         return songs;
       },
-      songCounts: function() {
-          var songs = {};
-          // return something like {"blue": 5, "red": 2, "green": 3}
-      }
-    };
+      songCounts: function() {   
+//          var count = 0;
+//          var freq = 0;
+//          var currentCount = "";
+//          var short = $rootScope.songPlays;
+//          console.log(short);
+//          console.log("short.length");
+//          console.log(short.length);
+//          
+//          for (var i = 0; i < short.length; i++) {
+//             console.log("hello");
+//          
+//            var current = short[i];
+//                 console.log("current");
+//                 console.log(current);
+//                 for(var j = i; j < short.length; j++) {
+//                     if (current.title == short[j].title){
+//                         console.log("found a match");
+//                         count++;
+//                         if(freq < count) {
+//                             freq = count;
+//                             currentCount = current;
+//                         }
+//                     }
+//                 }
+//               count = 0;
+//           }
+
+
+                       
+//          var counts = {};
+//          counts["Blue"]=1;
+//          counts["Blue"]++;
+          
+            var counts = {};
+          
+            for(var i = 0; i < $rootScope.songPlays.length; i++ ) {
+                    var song = $rootScope.songPlays[i];
+                    if (counts[song.title] == null) {
+                        counts[song.title]=1;
+                    } else {
+                        counts[song.title]++;
+                    }
+            }
+            return counts;
+          
+          
+        }   
+     };
   }
 
   angular
