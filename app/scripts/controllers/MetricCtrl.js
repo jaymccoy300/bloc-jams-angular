@@ -23,36 +23,48 @@
                 }
             }
         };
-
+      
+ x = function() {
+    for (var i = 0; i < Metric.songCounts.length; i++){
+        var sorting = Metric.songCounts()[i];
+        if (sorting == undefined){
+            y : 0;
+            console.log(y);
+        }else{
+            y : Metric.songCounts()[i];
+            console.log(y);
+        }
+    }
+};
+      
+        
         this.data = [
             {
-                key: "One",
-                y: 5
-            },
-            {
-                key: "Two",
-                y: 2
-            },
-            {
-                key: "Three",
-                y: 9
-            },
-            {
-                key: "Four",
-                y: 7
-            },
-            {
-                key: "Five",
-                y: 4
-            },
-            {
-                key: "Six",
-                y: 3
-            },
-            {
-                key: "Seven",
-                y: .5
+             key: sorting,
+             y : x()
             }
+            
+//            {
+//                key: "Blue",
+//                y: x()
+//            },
+//            {
+//                key: "Green",
+//                y: Metric.songCounts()["Green"]
+//            },
+//            {
+//                key: "Red",
+//                y: Metric.songCounts()["Red"]
+//            },
+//            {
+//                key: "Pink",
+//                y: Metric.songCounts()["Pink"]
+//            },
+//            {
+//                key: "Magenta",
+//                y: Metric.songCounts()["Magenta"]
+//  
+//            }
         ];
     };
      
