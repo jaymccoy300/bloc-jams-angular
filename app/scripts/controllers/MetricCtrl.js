@@ -24,48 +24,36 @@
             }
         };
       
- x = function() {
-    for (var i = 0; i < Metric.songCounts.length; i++){
-        var sorting = Metric.songCounts()[i];
-        if (sorting == undefined){
-            y : 0;
-            console.log(y);
-        }else{
-            y : Metric.songCounts()[i];
-            console.log(y);
+    var x = function() {
+        var data = [];
+        var songData = Metric.songCounts();
+        for (var title in songData) {
+           data.push({key: title, y: songData[title]});
         }
+        console.log(data);
+       return data;
     }
-};
+     
+//     
+//     
+//     
+//     
+//    for (var i = 0; i < Metric.songCounts.length; i++){
+//        var sorting = Metric.songCounts();
+//        if (sorting == undefined){
+//            y : 0;
+//            console.log(y);
+//        }else{
+//            y : Metric.songCounts()[i];
+//            console.log(y);
+//        }
+//    }
+//};
       
         
-        this.data = [
-            {
-             key: sorting,
-             y : x()
-            }
+        this.data = x();
             
-//            {
-//                key: "Blue",
-//                y: x()
-//            },
-//            {
-//                key: "Green",
-//                y: Metric.songCounts()["Green"]
-//            },
-//            {
-//                key: "Red",
-//                y: Metric.songCounts()["Red"]
-//            },
-//            {
-//                key: "Pink",
-//                y: Metric.songCounts()["Pink"]
-//            },
-//            {
-//                key: "Magenta",
-//                y: Metric.songCounts()["Magenta"]
-//  
-//            }
-        ];
+//        ];
     };
      
      
